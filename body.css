@@ -1,0 +1,32 @@
+:root{
+    --dkGray:#2b2b2b;
+    --gray:#7c7c7c;
+    --white:#e8e8e8;
+    --yellow:#fbfb00;
+    --time:0.15s;
+}
+
+body{
+  background-color:var(--dkGray);
+  background:linear-gradient(to bottom,#606060,var(--dkGray) 20%);
+  font-family:sans-serif;
+  overflow-x:hidden;
+}
+
+hr{
+  margin-bottom:80px;
+  border-top:solid 2px var(--gray);
+  width:80%;
+}
+
+span.code{
+  display:inline-block;
+  color:var(--yellow);
+  border-radius:5px;
+  background-color:var(--dkGray);
+  padding:0px 5px 0px 5px;
+}
+@font-face{
+  font-family:"baloo";
+  src:url("baloo.woff2") format("woff2");
+}
