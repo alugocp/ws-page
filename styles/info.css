@@ -1,0 +1,41 @@
+.info{
+  background-color:var(--gray);
+  color:var(--white);
+  border-radius:25px;
+  border:solid 5px black;
+  box-shadow:-5px 5px black;
+  padding:0px 50px 30px 50px;
+  width:80%;
+  margin:auto;
+  margin-bottom:80px;
+  font-size:20px;
+}
+.info h1{
+  margin-bottom:20px;
+  font-family:baloo;
+}
+.info a{
+  color:var(--yellow);
+  display:inline-block;
+  text-decoration:none;
+}
+.info a:hover{
+  text-decoration:underline;
+}
+.info .indent{
+  margin-left:1em;
+  margin-bottom:3px;
+}
+
+.info .ball{
+  transition:opacity var(--time) ease,filter var(--time) ease;
+  display:inline-block;
+  height:35px;
+  width:auto;
+  opacity:0.25;
+  filter:grayscale(75%);
+}
+.info:hover .ball{
+  filter:none;
+  opacity:1;
+}

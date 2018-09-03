@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="description" content="A JavaScript framework for static web development created by Alex Lugo">
+	<title>WebStatic v1.1</title>
+	<meta charset="utf-8">
+	<script src="lib/jquery.min.js"></script>
+	<link rel="stylesheet" href="body.css">
+	<link rel="stylesheet" href="info.css">
+</head>
+<body>
+	<div class="component nav-bar"></div>
+	<div class="component logo-space" id="home"></div>
+
+	<div class="info" id="about">
+		<h1>About <img class="ball" src="images/thunder-right.png"></img></h1>
+		<p>WebStatic is a free JavaScript front-end framework designed to streamline static web design.</p>
+		<p>With WebStatic you can compile modular HTML components into your webpages.
+		It interfaces directly with standard web languages so you can use it without learning any new syntax.
+		When you build a project WebStatic automatically creates a web directory structure based on routing and file dependencies.
+		Component source is then scoped and inserted into their references in each of your HTML pages.
+		These two processes let you work with components and define static URL routing without a learning curve.</p>
+		<p>The WebStatic framework runs on Node and does not require any config files or meta data.
+		Simply initialize the project directory with a single command and start coding!
+		WebStatic takes care of all the heavy lifting when you build a project so you can focus on your site's design and content.</p>
+	</div>
+	<hr>
+	<div class="info" id="download">
+		<h1>Download <img class="ball" src="images/thunder-right.png"></img></h1>
+		<p>There's an easy way to install WebStatic and there's a harder way for masochists.
+		If you choose the easy way, simply type <span class="code">npm install -g web-static</span> in the command line and let npm do the rest of the work.</p>
+		<p>If you're one of those aforementioned masochists then download the <a href="https://github.com/alugocp/web-static" target="_blank">source</a> from GitHub and copy it into your global Node packages directory.
+		Remember to copy the static.js script into whatever bin folder is present in your npm installation's PATH variable. Also don't forget to install all of WebStatic's dependencies.
+		I would not recommend being a masochist.</p>
+	</div>
+	<hr>
+	<div class="info" id="start">
+		<h1>Get Started <img class="ball" src="images/thunder-right.png"></img></h1>
+		<p>
+			With WebStatic it's easy to start a new project.
+			Simply cd into your soon-to-be project directory and run <span class="code">static init</span>.
+			You should now find all the folders you need present in your project directory.
+			They will all be empty except for the pages folder with its index.html file.
+		</p>
+		<p>
+			You can then start coding .css files in the styles folder, .js files in scripts and .html files in pages and components.
+			Run <span class="code">static build</span> from your project directory when you've finished writing or updating your code and call <span class="code">static open</span> to view it in your default browser.
+			If you prefer to alternate between coding and testing, use <span class="code">static auto</span> and WebStatic will automatically rebuild your project every 3 seconds when it detects a change in your project.
+		</p>
+	</div>
+	<hr>
+	<div class="info" id="feat">
+		<h1>Features <img class="ball" src="images/thunder-right.png"></img></h1>
+		<p>
+			WebStatic v1 comes with two features: components and routing.
+			Components essentially allow you to write object-oriented HTML.
+			You can write secondary html files complete with their own scripting and stylesheet properties and then insert them into one or more full-fledged pages within your project.
+			Scripts and styles are automatically scoped to a particular component before insertion, so you don't have to worry about any scope leakage.
+			That way you can create and reuse custom HTML structures throughout your site.
+			Currently WebStatic only supports static components, but v2 will include component parameters and dynamic component creation via a jQuery extension.
+		</p>
+		<p>
+			The WebStatic framework also makes routing easy.
+			Your pages folder will contain every complete web page in your project.
+			You get to control which page maps to what url purely by its filename.
+			For example, say you have index.html and foo.html in your pages folder.
+			You can access foo.html in your browser by adding a link in index.html and setting its href to foo.
+			When you build a WebStatic project, your files get reorganized as a web server directory.
+			This is what allows the framework to implement such an elegant, config-less routing feature.
+		</p>
+	</div>
+	<hr>
+	<div class="info" id="tools">
+		<h1>Tools <img class="ball" src="images/thunder-right.png"></img></h1>
+		<p>WebStatic comes with an easy-to-use command line interface.
+		Simply type <span class="code">static</span> to access the tool followed by whatever command you'd like to run:</p>
+		<div class="indent"><span class="code">init</span> creates a new WebStatic project within a given directory</div>
+		<div class="indent"><span class="code">open</span> accesses your project in the default browser so you can see how it looks in action</div>
+		<div class="indent"><span class="code">build</span> compiles your project into a static site ready for the web</div>
+		<div class="indent"><span class="code">auto</span> automatically rebuilds your project every 3 seconds when it detects a change</div>
+		<div class="indent"><span class="code">push</span> uploads your project to your GitHub remote origin's master branch and the build folder to its gh-pages branch (for free static web hosting)</div>
+		<p>These tools alone will allow you to create fully-realized static web sites.</p>
+	</div>
+
+	<div class="component footer"></div>
+</body>
+</html>
