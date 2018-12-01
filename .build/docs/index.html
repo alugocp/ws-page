@@ -1,0 +1,145 @@
+<!DOCTYPE html><html><head><!-- Built with WebStatic v1 -->
+	<title>WebStatic docs</title>
+	<meta charset="utf-8">
+	<script src="../lib/jquery.min.js"></script>
+	<link rel="stylesheet" href="../body.css">
+	<link rel="stylesheet" href="../info.css">
+</head>
+<body>
+	<div class="component docs-header" id="home"><a class="back" href="../">
+  <img src="../images/back-arrow.svg" title="Return to main page">
+</a>
+<img src="../images/thunder-left.png" class="side">
+<img src="../images/webstatic.png" class="logo">
+<img src="../images/thunder-right.png" class="side">
+<h3>Documentation</h3>
+
+<style>
+
+.docs-header{
+  padding:5%;
+  padding-bottom:10%;
+  color:var(--white);
+  text-align:center;
+  position:relative;
+  width:90%;
+  left:0%;
+  top:0%;
+}
+.component.docs-header .logo{
+  margin-right:2%;
+  margin-left:2%;
+  height:auto;
+  width:70%;
+}
+.component.docs-header .side{
+  height:auto;
+  width:8%;
+}
+
+.component.docs-header .back{
+  position:absolute;
+  left:0;
+  top:0;
+}
+.component.docs-header .back img{
+  transition:background-color 0.2s ease;
+  background-color:var(--dkGray);
+  border:solid 3px var(--dkGray);
+  border-radius:50%;
+  cursor:pointer;
+  padding:10px;
+  height:25px;
+}
+.component.docs-header .back img:hover{
+  background-color:var(--gray);
+}
+
+</style>
+</div>
+
+	<div class="info">
+		<h1>Routing <img class="ball" src="../images/thunder-right.png"></h1>
+		<p>
+			One of WebStatic&apos;s two main features is page routing.
+			Routing is how a website (usually a dynamic server-powered one) determines which content to show based on your input url.
+			For example, test.com will give you a different page than test.com/info.
+			WebStatic makes routing easy, although being a static framework it is limited in its flexibility.
+			If you have some WebStatic site called test.com, then your pages/index.html file is what will load when you open the site.
+			Any other file in the pages folder (say, pages/info.html) will be accessible as a subroute to the main page, so test.com/info as in our example.
+		</p>
+		<p>
+			Providing links from one page to another in WebStatic is simple.
+			Just provide relative paths from routed URLs.
+			For example, to link from pages/index.html to pages/info.html, use an a tag with href attribute of info.
+			For the other way around set your href attribute to &quot;../&quot;.
+		</p>
+	</div>
+	<hr>
+	<div class="info">
+		<h1>Scripts and styles <img class="ball" src="../images/thunder-right.png"></h1>
+		<p>
+			WebStatic is designed to work with raw JavaScript and CSS files, there&apos;s no new languages you have to learn.
+			To include a JS or CSS file in any of your pages or components, simply use a script or link tag respectively (as you would in an ordinary website).
+			If the file you want to include is a child of the scripts or styles folders, you can skip that part of the filepath.
+			For example, scripts/hello.js can be included via a script tag with a src attribute of hello.js.
+			The styles folder works the same way for CSS files (by convention).
+			Any other folders (or files in the root directory of your project) can be included via a filepath from the project&apos;s root directory.
+		</p>
+	</div>
+	<hr>
+	<div class="info">
+		<h1>Components <img class="ball" src="../images/thunder-right.png"></h1>
+		<p>
+			Components are WebStatic&apos;s second main feature, and it&apos;s found in many other JavaScript frameworks including Angular.
+			A component is a blokc of HTML, CSS and JS code (like object-oriented HTML or a &quot;widget&quot;) that you can insert into multiple pages on your site.
+			To create a component, simply add a new html file into your components folder.
+			The name of your file will be the component name.
+			Your component file doesn&apos;t need any html, body or head tags, just place in the content directly.
+			You can also add script and style tags.
+		</p>
+		<p>
+			Any JS or CSS you write in the component will be automatically scoped to that component (CSS rules will get &quot;.component.<i>component name</i>&quot; placed in front of them).
+			CSS selectors in jQuery calls will also get scoped to the component.
+			If you would like to select the entire component with CSS/jQuery, simply use .<i>component name</i>.
+		</p>
+		<p>
+			To add a component to one of your pages, create a div or other container element and give it the component class and a class matching your component name.
+			For example, if I wanted to add a component from my components/nav-bar.html file into a page, I would create a div with class of &quot;component nav-bar&quot;.
+			Webstatic will then scope your component code and copy/paste it into your container element.
+		</p>
+	</div>
+
+	<div class="component footer"><a href="https://github.com/alugocp/web-static">
+  <img src="../images/github.png" title="Github">
+</a>
+<a href="http://alexlugo.net/webdesign">
+  <img src="../images/developer.png" title="Developer">
+</a>
+<a href="https://www.npmjs.com/package/web-static">
+  <img src="../images/npm.png" title="npm">
+</a>
+
+<style>
+
+.footer{
+  padding-bottom:50px;
+  text-align:center;
+}
+.component.footer a{
+  text-decoration:none;
+  margin-right:8%;
+}
+.component.footer a:hover{
+  text-decoration:none;
+}
+.component.footer img{
+  height:50px;
+  width:auto;
+}
+
+</style>
+</div>
+
+
+</body></html>

@@ -5,6 +5,7 @@
   <a info="start">Get Started</a>
   <a info="feat">Features</a>
   <a info="tools">Tools</a>
+  <a href="docs">Docs</a>
 </div>
 
 <style>
@@ -25,10 +26,11 @@
 }
 a{
   transition:color var(--time) ease;
-  color:var(--white);
   border-left:solid 1px var(--dkGray);
-  padding:0 2vw 0 2vw;
   margin:0.5vw 0 0.5vw 0;
+  padding:0 2vw 0 2vw;
+  text-decoration:none;
+  color:var(--white);
   font-size:2vw;
 }
 a:first-of-type{
@@ -49,7 +51,7 @@ div{
 
 var navh=$(".nav-bar").height();
 
-$("a").click(function(){
+$("a[info]").click(function(){
   var id="#"+$(this).attr("info");
   var top=$(id).offset().top-navh;
   $("body,html").animate({scrollTop:top},200);

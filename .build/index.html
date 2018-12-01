@@ -1,6 +1,6 @@
 <!DOCTYPE html><html><head><!-- Built with WebStatic v1 -->
 	<meta name="description" content="A JavaScript framework for static web development created by Alex Lugo">
-	<title>WebStatic v1.1</title>
+	<title>WebStatic v1.2</title>
 	<meta charset="utf-8">
 	<script src="lib/jquery.min.js"></script>
 	<link rel="stylesheet" href="body.css">
@@ -14,6 +14,7 @@
   <a info="start">Get Started</a>
   <a info="feat">Features</a>
   <a info="tools">Tools</a>
+  <a href="docs">Docs</a>
 </div>
 
 <style>
@@ -34,10 +35,11 @@
 }
 .component.nav-bar a{
   transition:color var(--time) ease;
-  color:var(--white);
   border-left:solid 1px var(--dkGray);
-  padding:0 2vw 0 2vw;
   margin:0.5vw 0 0.5vw 0;
+  padding:0 2vw 0 2vw;
+  text-decoration:none;
+  color:var(--white);
   font-size:2vw;
 }
 .component.nav-bar a:first-of-type{
@@ -58,7 +60,7 @@
 
 var navh=$(".nav-bar").height();
 
-$(".component.nav-bar a").click(function(){
+$(".component.nav-bar a[info]").click(function(){
   var id="#"+$(this).attr("info");
   var top=$(id).offset().top-navh;
   $(".component.nav-bar body,html").animate({scrollTop:top},200);
@@ -83,7 +85,6 @@ $(".component.nav-bar a").click(function(){
   width:90%;
   left:0%;
   top:0%;
-  z-index:-1;
 }
 .component.logo-space .logo{
   height:auto;
